@@ -1,0 +1,390 @@
+/*--css hack--*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFangSC-Regular','微软雅黑', 'Arial', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {margin: 0;padding: 0;}
+a{text-decoration: none;}
+img {
+    border-style: none;
+    pointer-events: none;
+}
+html{font-size: 100px;}
+ul,li{list-style: none;}
+html,body{width: 100%;height: 100%;overflow: auto;background: #ffffff}
+.fl{ float: left;}
+.fr{float: right;}
+.fl-clear{clear: both;}
+/*------主板样式表-------*/
+.wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.user_info{
+    width: 100%;
+    height: 1.1rem;
+    position: relative;
+}
+.user_head{
+    width: .7rem;
+    height: .7rem;
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+}
+.user_head img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .7rem;
+    height: .7rem;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.user_name{
+    width: 50%;
+    height: .7rem;
+    position: absolute;
+    top: .2rem;
+    left: 1.15rem;
+    padding: 0.03rem 0;
+    box-sizing: border-box;
+}
+#user_name_span{
+    position: absolute;
+    top:0;
+    font-size: .24rem;
+    font-weight: bold;
+    color:rgb(51,51,51);
+}
+#create_time_span{
+    position: absolute;
+    bottom:0;
+    font-size: .22rem;
+    color:rgb(153,153,153);
+}
+.scroll-img{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-img2{
+    width: 100%;
+    position: relative;
+}
+.scroll-img2 img{
+    width: 100%;
+}
+.scroll-img-box{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.scroll-img-td{
+    height: 100%;
+    position: relative;
+}
+.scroll-img-td img{
+    height: 100%;
+}
+#marquePic1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#marquePic2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.describe{
+    width: 100%;
+    height: .8rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.describe_span{
+    font-size: .32rem;
+    font-weight: bold;
+    color:rgb(51,51,51);
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+}
+.icon_box{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.comment_icon{
+    width: .4rem;
+    height: .4rem;
+    margin-left: .2rem;
+    margin-right: .2rem;
+}
+.icon_span{
+    font-size: .24rem;
+    color: rgb(102,102,102);
+    font-family: Helvetica, sans-serif;
+    margin: .05rem 0.6rem 0 0;
+}
+.button_div {
+    overflow: hidden;
+    width: .6rem;
+    height: .6rem;
+    position: absolute;
+    left: .2rem;
+    bottom: .05rem;
+    z-index: 999;
+}
+/*--------大放大镜--------*/
+.big_magnifier{
+    overflow: hidden;
+    width: 4.6rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.9rem;
+    margin-left: -2.3rem;
+    z-index: 999;
+    text-align: center;
+    display: none;
+}
+.big_magnifier img{
+    overflow: hidden;
+    width: 1.2rem;
+    height: 1.16rem;
+    z-index: 999;
+}
+.big_magnifier span{
+    font-size: .32rem;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*--------右侧三个图标---------*/
+.turn_div{
+    overflow: hidden;
+    width: .45rem;
+    height: .45rem;
+    position: absolute;
+    right: .2rem;
+    bottom: .1rem;
+    z-index: 999;
+}
+.comment_div{
+    overflow: hidden;
+    width: 1rem;
+    height: .5rem;
+    position: absolute;
+    right: .15rem;
+    bottom: .1rem;
+    z-index: 9;
+}
+.magnifier_div{
+    overflow: hidden;
+    width: .45rem;
+    height: .45rem;
+    position: absolute;
+    right: .2rem;
+    bottom: 1.5rem;
+    z-index: 999;
+}
+.button_div img{
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.comment_div img{
+    width: 1rem;
+    height: .5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.turn_div img,.magnifier_div img{
+    width: .45rem;
+    height: .45rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*--------放大镜框-----------*/
+.magnifier_div{
+    display: none;
+}
+.magnifier_box{
+    position: absolute;
+    left: 0.05rem;
+    top: 0.05rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 99;
+}
+.magnifier_box img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.magnifier_box_img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.magnifier_box_img img{
+    height: 100%;
+}
+#magnifierImg1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#magnifierImg2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*--------圆形进度条---------*/
+.circleProgress_wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: none;
+    background: #dddddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.wrapper{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+.right{
+    right:0;
+}
+.left{
+    left:0;
+}
+.circleProgress{
+    box-sizing: border-box;
+    border:.08rem solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    -webkit-transform:  rotate(-135deg);
+    -moz-transform:  rotate(-135deg);
+    -ms-transform:  rotate(-135deg);
+    -o-transform:  rotate(-135deg);
+    transform:  rotate(-135deg);
+}
+.rightCircle{
+    border-top:.08rem solid #f9be00;
+    border-right:.08rem solid #f9be00;
+    right:0;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+.leftCircle{
+    border-bottom:.08rem solid #f9be00;
+    border-left:.08rem solid #f9be00;
+    left:0;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+/*---------水平进度条----------*/
+.progress_bar{
+    position: absolute;
+    bottom: 0.25rem;
+    left: 1rem;
+    right: 0.8rem;
+    height: .05rem;
+    background: #dddddd;
+    border-radius: .05rem;
+}
+.auto_progress{
+    height: .05rem;
+    background: #f0664d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: .05rem;
+}
+/*---------小评论-----------*/
+.littleComment{
+    height: .45rem;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: .08rem;
+    font-size: .25rem;
+    display: none;
+}
+.littleComment::after{
+    content: '';
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+.littleComment img{
+    width: 0.35rem;
+    height: 0.35rem;
+    vertical-align: middle;
+    float: left;
+    margin: 0.05rem;
+    border-radius: 50%;
+}
+.littleComment_span{
+    color: #dddddd;
+    font-weight: bold;
+    line-height: 0.5rem;
+    float: left;
+    margin-right: 0.1rem;
+}
+.modalImg{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: hidden;
+    text-align: center;
+    background:#ffffff;
+}
+.modalImg img{
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    z-index: 9999;
+}
